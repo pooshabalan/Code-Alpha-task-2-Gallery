@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Gallery</h1>
+            <nav class="nav">
+                <button class="nav-btn active" data-category="all">All</button>
+                <button class="nav-btn" data-category="camera">Camera</button>
+                <button class="nav-btn" data-category="nature">Nature</button>
+                <button class="nav-btn" data-category="screenshot">Screenshot</button>
+                <button class="nav-btn" data-category="night">Night</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="gallery" id="gallery">
+                
+                <div class="gallery-item" data-category="camera" data-index="0">
+                    <img src="./images/Bus stand.jpeg" alt="Professional portrait photography" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Camera</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="camera" data-index="1">
+                    <img src="images/Code.jpeg" alt="Creative portrait session" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Camera</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="camera" data-index="2">
+                    <img src="./images/Kerchief.jpeg" alt="Street photography moment" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Camera</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature" data-index="3">
+                    <img src="./images/Nature 1.jpeg" alt="Artistic portrait composition" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Nature</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature" data-index="4">
+                    <img src="./images/Nature 2.jpeg" alt="Professional headshot session" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Nature</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature" data-index="5">
+                    <img src="./images/Nature 3.jpeg"alt="Fashion photography shoot" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Nature</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="night" data-index="6">
+                    <img src="images/Night.jpeg" alt="Studio portrait lighting" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Night</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="night" data-index="7">
+                    <img src="./images/Nigth 2.jpeg" alt="Natural light portrait" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Night</span>
+                    </div>
+                </div>
+
+                
+                <div class="gallery-item" data-category="camera" data-index="8">
+                    <img src="./images/Cup of cofffe.jpeg" alt="Mountain landscape vista" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Camera</span>
+                     </div>
+                </div>
+                
+                <div class="gallery-item" data-category="screenshot" data-index="9">
+                    <img src="./images/Screenshot 2.jpeg" alt="Forest pathway scene" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Screenshot</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="screenshot" data-index="10">
+                    <img src="./images/Screenshot 3.jpeg" alt="Coastal ocean view" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Screenshot</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="screenshot" data-index="11">
+                    <img src="./images/Poos ss.jpeg" alt="Autumn forest colors" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="category-tag">Screenshot</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            <button class="modal-nav modal-prev" id="modal-prev" aria-label="Previous image">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15,18 9,12 15,6"></polyline>
+                </svg>
+            </button>
+            <button class="modal-nav modal-next" id="modal-next" aria-label="Next image">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9,6 15,12 9,18"></polyline>
+                </svg>
+            </button>
+            <div class="modal-image-container">
+                <img class="modal-image" id="modal-image" alt="" />
+            </div>
+            <div class="modal-info">
+                <span class="modal-category" id="modal-category"></span>
+                <span class="modal-counter" id="modal-counter"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
